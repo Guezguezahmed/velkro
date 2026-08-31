@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Velko is an embedded digital creative technology studio delivering elite SaaS, mobile, web, and branding solutions." />
+    <title>Velko® — Embedded Digital Creative Technology Studio</title>
+    <link rel="icon" type="image/png" href="/src/assets/images/logo-dark.png" />
+    <!-- Google Fonts: Space Grotesk (technical headings) & Inter (refined body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <!-- Custom Cursor Follower -->
+    <div id="custom-cursor" class="custom-cursor"></div>
+    <div id="custom-cursor-follower" class="custom-cursor-follower">
+      <span class="cursor-text"></span>
+    </div>
+
+    <!-- Sticky Fixed Header (Fades in on scroll) -->
+    <div class="sticky-header-fixed">
+      <div class="sticky-header-left">
+        <div class="sticky-bird-logo">
+          <img src="/src/assets/images/logo-light.png" alt="Velko" class="nav-logo-img" style="height: 32px; width: auto;" />
+        </div>
+      </div>
+      <div class="sticky-header-right">
+        <a href="#pricing" class="btn btn-nav btn-magnetic">
+          <span>Let's work together</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Section 1: Hero (Fixed in background) -->
+    <section class="section-hero" id="hero">
+      <canvas id="hero-canvas" class="hero-canvas"></canvas>
+      <div class="hero-grid-overlay"></div>
+      
+      <!-- Hero Header (Scrolls out of view with the page) -->
+      <div class="hero-header-scrolling">
+        <div class="header-left">
+          <nav class="header-nav-vertical">
+            <a href="#work" class="nav-item">Work</a>
+            <a href="#approach" class="nav-item">Approach</a>
+            <a href="#why-us" class="nav-item">Why Us</a>
+            <a href="#pricing" class="nav-item">Pricing</a>
+          </nav>
+        </div>
+        <div class="header-center">
+          <a href="#" class="logo-link" style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="/src/assets/images/logo-light.png" alt="Velko" class="nav-logo-img" style="height: 48px; width: auto;" />
+            <span>Velko®</span>
+          </a>
+        </div>
+        <div class="header-right">
+          <a href="#pricing" class="btn btn-nav btn-magnetic">
+            <span>Let's work together</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16">
+              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Content (Scrolls slower for Parallax Reveal) -->
+      <div class="hero-content-parallax container">
+        <div class="hero-main">
+          <h1 class="hero-title">
+            <span>Embedded digital team</span>
+            <span>for SaaS, mobile, web & branding</span>
+          </h1>
+          <p class="hero-subtitle">
+            We don't work for your team — we become part of it.<br>
+            Then we build, refine, and evolve your product from the inside out.
+          </p>
+          <div class="hero-actions">
+            <a href="#approach" class="btn btn-primary btn-magnetic">
+              <span>Learn our approach</span>
+              <span class="btn-arrow-box">
+                <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Bottom Info Bar -->
+        <div class="hero-footer">
+          <div class="hero-footer-left">
+            <span class="studio-label">Opinionated creative technology studio</span>
+          </div>
+          
+          <div class="hero-footer-center">
+            <span class="status-label">Global Impact</span>
+            <span class="status-value location-time">Ariana, Tunisia — 22:58</span>
+          </div>
+          
+          <div class="hero-footer-right-container">
+            <!-- 3D Card Stack Showcase -->
+            <div class="showcase-stack-container">
+              <div class="showcase-stack">
+                <div class="showcase-card card-blue">
+                  <div class="card-content">
+                    <div class="card-decor-circle"></div>
+                    <div class="card-decor-line"></div>
+                    <div class="card-decor-line small"></div>
+                  </div>
+                </div>
+                <div class="showcase-card card-white">
+                  <div class="card-content">
+                    <div class="card-stripe"></div>
+                    <span class="card-price">€5,000</span>
+                    <span class="card-lbl">Embedded/mo</span>
+                  </div>
+                </div>
+                <div class="showcase-card card-dark">
+                  <div class="card-content">
+                    <div class="mini-notch"></div>
+                    <div class="mini-card"></div>
+                    <div class="mini-bars">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase-card card-brand">
+                  <div class="card-content">
+                    <div class="circle-stamp">v</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Vertically aligned services stack -->
+            <div class="services-vertical-stack">
+              <span>SaaS</span>
+              <span>Mobile</span>
+              <span>Web</span>
+              <span>Branding</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scroll Spacer (Lets page scroll naturally to reveal next section) -->
+    <div class="hero-scroll-spacer"></div>
+
+    <!-- Main Content Flow (Relative section overlapping the Hero) -->
+    <main class="main-content-flow">
+      <!-- Section 2: The Approach (Light Mode) -->
+      <section class="section-approach" id="approach">
+        <div class="container approach-container-layout">
+          <!-- Left Column: Sticky vertical labels -->
+          <div class="approach-left">
+            <div class="vertical-labels-stack">
+              <span>Creative</span>
+              <span>Opinionated</span>
+              <span>Operators</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Paragraph only -->
+          <div class="approach-right">
+            <div class="approach-header">
+              <div class="hero-red-dot"></div>
+              <h2 class="approach-title reveal-text">
+                At Velko, we operate as an extension of your team — not observers, operators. We embed, take ownership, and push your product further than internal teams typically can.
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Horizontal scroll cards strip (full width, outside the grid) -->
+        <div class="approach-cards-strip">
+          <div class="approach-cards-track" id="approach-cards-track">
+            <div class="approach-card">
+              <span class="card-num">01</span>
+              <h3 class="card-title">Schedule your call</h3>
+              <p class="card-text">
+                A quick, honest conversation — no pitch decks, no fluff. We learn your product, your goals, and where we can move the needle fastest.
+              </p>
+            </div>
+            <div class="approach-card">
+              <span class="card-num">02</span>
+              <h3 class="card-title">Subscribe to the plan</h3>
+              <p class="card-text">
+                Pick a plan that fits where you are today. No lock-in, no long contracts — we earn your trust month over month by actually delivering.
+              </p>
+            </div>
+            <div class="approach-card">
+              <span class="card-num">03</span>
+              <h3 class="card-title">We ship in iterations</h3>
+              <p class="card-text">
+                We embed, prioritize, and start moving fast. Weekly cycles, tight feedback loops, real output — not status updates and slide decks.
+              </p>
+            </div>
+            <div class="approach-card">
+              <span class="card-num">04</span>
+              <h3 class="card-title">Repeat</h3>
+              <p class="card-text">
+                The longer we're in, the sharper we get. Every cycle we understand your product deeper, move faster, and raise the bar on what we ship.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="approach-cta">
+            <a href="#pricing" class="btn btn-dark btn-magnetic">
+              <span>Schedule your call</span>
+              <span class="btn-arrow-box dark">
+                <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Capabilities (Light Mode - Physics Skills) -->
+      <section class="section-capabilities" id="capabilities">
+        <div class="container relative">
+          <div class="capabilities-header">
+            <h2 class="capabilities-title">A dedicated team, <br>fully embedded</h2>
+          </div>
+          <!-- Physics simulation container -->
+          <div id="physics-container" class="physics-container"></div>
+        </div>
+      </section>
+
+      <!-- Section 3.5: Scrolling Screens (Light Mode) -->
+      <section class="section-scrolling-screens">
+        <div class="container">
+          <div class="scrolling-screens-header">
+            <span class="screens-subtitle">We're ready to revolutionize your product</span>
+            <a href="#" class="screens-link">Let's work together</a>
+          </div>
+        </div>
+        <div class="scrolling-screens-track-container">
+          <div class="scrolling-screens-track">
+            <!-- Original Set -->
+            <img src="/src/assets/images/unabyss.webp" alt="Project 1" class="screen-card">
+            <img src="/src/assets/images/databerry.webp" alt="Project 2" class="screen-card">
+            <img src="/src/assets/images/freu.webp" alt="Project 3" class="screen-card">
+            <img src="/src/assets/images/limrun.webp" alt="Project 4" class="screen-card">
+            <img src="/src/assets/images/rivermarkets.webp" alt="Project 5" class="screen-card">
+            <!-- Duplicated Set for Infinite Scroll -->
+            <img src="/src/assets/images/unabyss.webp" alt="Project 1" class="screen-card">
+            <img src="/src/assets/images/databerry.webp" alt="Project 2" class="screen-card">
+            <img src="/src/assets/images/freu.webp" alt="Project 3" class="screen-card">
+            <img src="/src/assets/images/limrun.webp" alt="Project 4" class="screen-card">
+            <img src="/src/assets/images/rivermarkets.webp" alt="Project 5" class="screen-card">
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Why Us (Dark Mode) -->
+      <section class="section-why" id="why-us">
+        <div class="container why-layout">
+          <div class="why-left">
+            <h2 class="sticky-headline">
+              We've always believed a small, focused team can change a product completely.
+            </h2>
+          </div>
+          <div class="why-right">
+            <div class="why-feature-list">
+              <div class="why-feature">
+                <h3 class="feature-title">No hiring overhead</h3>
+                <p class="feature-text">
+                  Skip the time, cost, and risk of building in-house. Get a team that's already sharp, aligned, and ready to execute immediately.
+                </p>
+              </div>
+              <div class="why-feature">
+                <h3 class="feature-title">Speed by default</h3>
+                <p class="feature-text">
+                  No ramp-up cycles. No long onboarding. We plug in fast, integrate with your toolchain, and start moving code to production.
+                </p>
+              </div>
+              <div class="why-feature">
+                <h3 class="feature-title">Backlog, reduced fast</h3>
+                <p class="feature-text">
+                  We hit the ground running, clearing your features and bug backlogs with focused, high-throughput delivery and execution.
+                </p>
+              </div>
+              <div class="why-feature">
+                <h3 class="feature-title">Deep product understanding</h3>
+                <p class="feature-text">
+                  We don't just write code; we design with a product-first mindset, thinking about the user experience, scalability, and metrics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Selected Work (Dark Mode) -->
+      <section class="section-work" id="work">
+        <div class="container">
+          <div class="work-header work-header-new">
+            <div class="work-header-left">
+              <h2 class="work-title" style="margin-top: 0;">Selected Work</h2>
+            </div>
+            <div class="work-header-right">
+              <p class="work-header-desc">More of our work are dashboards and on-going<br>projects that we can't build full case studies for</p>
+            </div>
+          </div>
+
+          <div class="work-grid">
+            <!-- Project 1 -->
+            <div class="work-card-wrapper">
+              <a href="#" class="work-card">
+                <div class="work-image-container new-image-container">
+                  <img src="/src/assets/images/Projet1.png" alt="Mal AI" class="work-project-img" />
+                </div>
+                <div class="work-info">
+                  <h3 class="work-project-title">Mal AI — Islamic finance</h3>
+                  <span class="work-category">Brand exploration & identity</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="work-card-wrapper">
+              <a href="#" class="work-card">
+                <div class="work-image-container new-image-container">
+                  <img src="/src/assets/images/Projet2.png" alt="NR8 Global" class="work-project-img" />
+                </div>
+                <div class="work-info">
+                  <h3 class="work-project-title">NR8 Global — Creative Studio</h3>
+                  <span class="work-category">Web Design & Dev.</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="work-card-wrapper">
+              <a href="#" class="work-card">
+                <div class="work-image-container new-image-container">
+                  <img src="/src/assets/images/Projet3.png" alt="Ringed" class="work-project-img" />
+                </div>
+                <div class="work-info">
+                  <h3 class="work-project-title">Ringed — Marriage & dating</h3>
+                  <span class="work-category">Product design · iOS & Android</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="work-card-wrapper">
+              <a href="#" class="work-card">
+                <div class="work-image-container new-image-container">
+                  <img src="/src/assets/images/Projet4.png" alt="DrinkLust" class="work-project-img" />
+                </div>
+                <div class="work-info">
+                  <h3 class="work-project-title">DrinkLust — Wellness & intimacy</h3>
+                  <span class="work-category">Brand, e-commerce & 3D</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+          <div class="work-view-all-container">
+            <a href="#" class="work-view-all">View all</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Impact Stats (Mixed Mode) -->
+      <section class="section-stats stats-white">
+        <div class="container stats-container">
+          <div class="stats-grid-new">
+            <div class="stats-block-new block-light">
+              <span class="stat-number-new">48+</span>
+              <span class="stat-label-new">Projects delivered</span>
+            </div>
+            <div class="stats-block-new block-red-new">
+              <span class="stat-number-new">-60%</span>
+              <span class="stat-label-new">Agency cost vs hiring in-house</span>
+            </div>
+            <div class="stats-block-new block-light">
+              <span class="stat-number-new">2x</span>
+              <span class="stat-label-new">Faster time to market</span>
+            </div>
+            <div class="stats-block-new block-light">
+              <span class="stat-number-new">96%</span>
+              <span class="stat-label-new">Client retention rate</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Pricing -->
+      <section class="section-pricing" id="pricing">
+        <div class="container">
+          <div class="pricing-header">
+            <span class="section-badge">PRICING</span>
+            <h2 class="pricing-title">Simple plans.<br>No surprises.</h2>
+            <p class="pricing-subtitle">Pick a plan that fits where you are today.<br>No lock-in, no long contracts — we earn your<br>trust month over month by actually delivering.</p>
+          </div>
+
+          <div class="pricing-grid">
+            <!-- Col 1 -->
+            <div class="pricing-col col-gray">
+              <div class="pricing-col-header">
+                <span class="pricing-plan-name">STARTER</span>
+                <div class="pricing-price">
+                  <span class="price-val">799 TND</span>
+                </div>
+                <p class="pricing-desc">For founders who need steady design and dev support without the agency overhead.</p>
+              </div>
+              <ul class="pricing-features">
+                <li><i data-lucide="check" class="feat-icon"></i> 1 Dedicated team member (dev or design)</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Up to 15 hours/month</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Weekly progress update</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Slack & email support</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Cancel or pause anytime</li>
+              </ul>
+              <div class="pricing-col-footer">
+                <a href="#contact" class="btn btn-pricing-action btn-magnetic">Book a free 20-min call</a>
+              </div>
+            </div>
+
+            <!-- Col 2 (Dominant - Black Mode) -->
+            <div class="pricing-col col-black featured">
+              <div class="featured-badge">MOST POPULAR</div>
+              <div class="pricing-col-header">
+                <span class="pricing-plan-name">EMBEDDED</span>
+                <div class="pricing-price">
+                  <span class="price-val">1,499 TND</span>
+                  <span class="price-period" style="font-size: 1.2rem;">+ 100/mo</span>
+                </div>
+                <p class="pricing-desc">A fully embedded duo inside your product. We ship, you grow.</p>
+              </div>
+              <ul class="pricing-features">
+                <li><i data-lucide="check" class="feat-icon"></i> 1 Developer + 1 Designer</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Up to 40 hours/month</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Daily communication & syncs</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Priority backlog execution</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Slack direct channel</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Cancel or pause anytime</li>
+              </ul>
+              <div class="pricing-col-footer">
+                <a href="#contact" class="btn btn-primary btn-magnetic">Book a free 20-min call</a>
+              </div>
+            </div>
+
+            <!-- Col 3 -->
+            <div class="pricing-col col-gray">
+              <div class="pricing-col-header">
+                <span class="pricing-plan-name">SCALE</span>
+                <div class="pricing-price">
+                  <span class="price-val">1,999 TND</span>
+                  <span class="price-period" style="font-size: 1.2rem;">+ 200/mo</span>
+                </div>
+                <p class="pricing-desc">For products that need full-cycle execution — design, dev, mobile and brand.</p>
+              </div>
+              <ul class="pricing-features">
+                <li><i data-lucide="check" class="feat-icon"></i> 3 Embedded specialists</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Unlimited requests</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Mobile & web coverage</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Strategic product roadmap sessions</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Brand & motion included</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Dedicated PM</li>
+                <li><i data-lucide="check" class="feat-icon"></i> Cancel or pause anytime</li>
+              </ul>
+              <div class="pricing-col-footer">
+                <a href="#contact" class="btn btn-pricing-action btn-magnetic">Book a free 20-min call</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pricing-footer-note">
+            <p>All plans are billed in TND. Cancel or pause anytime — no questions asked.<br>
+            Not sure which plan fits? <a href="#contact">→ Book a free 20-min call</a></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: FAQ -->
+      <section class="section-faq">
+        <div class="container faq-layout">
+          <div class="faq-left">
+            <h2 class="faq-section-title">Questions?</h2>
+            <p class="faq-section-desc">Can't find the answer you're looking for?<br>We're one message away.</p>
+            <a href="#contact" class="btn btn-primary btn-magnetic" style="margin-top: 2rem;">→ Book a free call</a>
+          </div>
+          <div class="faq-right">
+            <div class="faq-accordion-group">
+              <!-- Item 1 -->
+              <div class="faq-item">
+                <button class="faq-trigger">
+                  <span class="faq-q">Do you work with international clients from Tunisia?</span>
+                  <span class="faq-icon-box">
+                    <svg class="faq-plus" viewBox="0 0 24 24" width="24" height="24">
+                      <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-content">
+                  <div class="faq-answer">
+                    <p>Yes, fully. All our communication, contracts, and deliverables are in English or French. We work async-first across European and Gulf time zones, and our team is used to remote collaboration with clients in France, the UAE, Canada, and beyond. Tunisia is where we're based — not where we're limited.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="faq-item">
+                <button class="faq-trigger">
+                  <span class="faq-q">How quickly can you start?</span>
+                  <span class="faq-icon-box">
+                    <svg class="faq-plus" viewBox="0 0 24 24" width="24" height="24">
+                      <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-content">
+                  <div class="faq-answer">
+                    <p>Usually within 3 to 5 business days. After a 20-minute discovery call, we align on tools, set up shared channels, and hit the ground running. No lengthy onboarding decks, no wasted weeks.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="faq-item">
+                <button class="faq-trigger">
+                  <span class="faq-q">Can I pause or cancel anytime?</span>
+                  <span class="faq-icon-box">
+                    <svg class="faq-plus" viewBox="0 0 24 24" width="24" height="24">
+                      <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-content">
+                  <div class="faq-answer">
+                    <p>Yes, no questions asked. We operate month to month by design. If your priorities shift, your budget changes, or you simply need a break — pause or cancel with 7 days notice. We believe in earning your business every month, not locking you in.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="faq-item">
+                <button class="faq-trigger">
+                  <span class="faq-q">Do you handle mobile AND web or just one?</span>
+                  <span class="faq-icon-box">
+                    <svg class="faq-plus" viewBox="0 0 24 24" width="24" height="24">
+                      <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-content">
+                  <div class="faq-answer">
+                    <p>Both. Our team covers React Native and Flutter for mobile, and React or Next.js for web. You don't need to hire separate teams for each platform — that's the whole point of Velko.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="faq-item">
+                <button class="faq-trigger">
+                  <span class="faq-q">How is Velko different from hiring a freelancer?</span>
+                  <span class="faq-icon-box">
+                    <svg class="faq-plus" viewBox="0 0 24 24" width="24" height="24">
+                      <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-content">
+                  <div class="faq-answer">
+                    <p>A freelancer disappears when life happens. With Velko you get a structured team — designer, developer, PM — all accountable to the same delivery rhythm. More reliable than a solo hire, a fraction of the cost of a traditional agency.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <span class="footer-logo">
+              <img src="/src/assets/images/logo-dark.png" alt="Velko" class="nav-logo-img" style="height: 48px; width: auto;" />
+            </span>
+            <p class="footer-tagline">Building the products that shape the future.</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-col-links">
+              <h4>Studio</h4>
+              <a href="#work">Selected Work</a>
+              <a href="#approach">Our Approach</a>
+              <a href="#why-us">Why Us</a>
+            </div>
+            <div class="footer-col-links">
+              <h4>Contact</h4>
+              <a href="mailto:hello@Velko.io">hello@Velko.io</a>
+              <a href="#pricing">Book Call</a>
+            </div>
+            <div class="footer-col-links">
+              <h4>Socials</h4>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2026 Velko Studio. All rights reserved. Creative Technology Studio.</p>
+          <div class="back-to-top">
+            <a href="#hero" class="btn-back-top btn-magnetic">
+              <span>Back to top</span>
+              <svg viewBox="0 0 24 24" width="14" height="14">
+                <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
